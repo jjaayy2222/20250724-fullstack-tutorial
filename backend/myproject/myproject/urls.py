@@ -25,9 +25,9 @@ from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns # 개발 서버 정적 파일 서빙에 사용
 
 urlpatterns = [
-    path('admin/', admin.site.urls),        # Admin URL
-    path('myapp/', include('myapp.urls')),  # 'myapp' 앱의 URL 포함
-    # 필요한 경우 다른 앱의 URL을 여기에 추가합
+    path('admin/', admin.site.urls),                    # Admin URL
+    path('myapp/', include('myapp.urls')),              # 'myapp' 앱의 URL 포함
+    path('api/', include('rest_framework.urls')),       # DRF의 기본 인증 URL 포함
 ]
 
 # 개발 서버 (DEBUG=True)에서 정적 파일 및 미디어 파일을 제공하기 위한 설정

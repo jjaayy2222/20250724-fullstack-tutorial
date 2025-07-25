@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
+    # DRF 추가
+    'rest_framework',
+    
     # myapp
     'myapp',
 ]
@@ -54,6 +57,28 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'myproject.urls'
+# 추가
+WSGI_APPLICATION = 'myproject.wsgi.application'
+ASGI_APPLICATION = 'myproject.asgi.application'
+
+# DRF 설정
+from rest_framework import permissions                  # DRF 권한 클래스
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [                     # 교재에는 없지만, 일반적으로 많이 사용되는 설정
+        'rest_framework.permissions.AllowAny',          # 기본적으로 모든 API에 접근을 허용 (개발 단계에서 유용)
+        # 'rest_framework.permissions.IsAuthenticated', # 인증된 사용자만 접근 허용
+    ],
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',        # 기본 응답 형식을 JSON으로 설정
+    ],
+    'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.JSONParser',            # 기본 요청 본문 파싱 형식을 JSON으로 설정
+    ],
+    # 'DEFAULT_AUTHENTICATION_CLASSES': [               # 인증 방식 설정 (선택적)
+    #     'rest_framework.authentication.TokenAuthentication',
+    # ],
+}
 
 TEMPLATES = [
     {
