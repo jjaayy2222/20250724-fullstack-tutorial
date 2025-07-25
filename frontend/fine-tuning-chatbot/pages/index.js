@@ -16,9 +16,9 @@ const Home = () => {
       // 백엔드 API로부터 데이터 가져오기
       // 백틱(`)을 사용하여 JavaScript 변수(BACKEND_URL)를 문자열 안에 쉽게 삽입
       // '/api/hello' = 백엔드에서 정의할 API 엔드포인트
-      fetch(`${BACKEND_URL}api/hello`)
-        .then((response) => response.json()) // 서버 응답을 JSON 형식으로 파싱(변환)
-        .then((data) => setData(data));     // 파싱된 JSON 데이터를 'data' 상태 변수에 저장하여 UI를 업데이트
+        fetch(`${BACKEND_URL}api/hello`)
+            .then((response) => response.json()) // 서버 응답을 JSON 형식으로 파싱(변환)
+            .then((data) => setData(data));     // 파싱된 JSON 데이터를 'data' 상태 변수에 저장하여 UI를 업데이트
     }, []); // 의존성 배열. 비어있으면 컴포넌트 마운트 시 한 번만 실행
 
 
