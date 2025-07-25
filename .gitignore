@@ -1,0 +1,22 @@
+# Python (Django 백엔드용)
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Node.js (Next.js 프론트엔드용)
+frontend/node_modules/
+frontend/.next/
+frontend/npm-debug.log
+frontend/.env.local
+frontend/.env.*.local
+frontend/*.tgz
+
+# OS X (macOS 시스템 파일)
+.DS_Store
+
+# 기타 자주 무시되는 파일
+*.log
+*.swp
+.env
