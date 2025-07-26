@@ -30,6 +30,10 @@
 -   Django 앱(myapp) 생성 및 기본 뷰/템플릿 연동
 -   Django REST Framework 설치 및 API 뷰 구성
 -   Django project 구조 재조정 (backend / django-practice -> myproject)
+-   **DRF API 문서화 (drf-spectacular) 및 설정 개선**
+-   **DRF API 기본 페이지네이션 적용**
+-   **Django 템플릿 경로 설정 문제 해결 및 테스트 페이지 추가**
+-   **DRF 'Book' 모델 API 테스트 코드 구현 및 결과 검증**
 
 ---
 **개발 환경 / Development Environment:**
