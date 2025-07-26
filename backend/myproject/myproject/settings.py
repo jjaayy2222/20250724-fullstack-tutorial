@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 import os
-from pathlib import Path
+from pathlib import Path                                    # BASE_DIR을 위한 import
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent           # BASE_DIR 정의 확인 (myproject/backend/myproject 를 가리킬 수 있음)
 
 
 # Quick-start development settings - unsuitable for production
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     
     # DRF 추가
     'rest_framework',
+    'drf_spectacular',              # DRF 문서화 도구
     
     # myapp
     'myapp',
@@ -64,29 +65,61 @@ ASGI_APPLICATION = 'myproject.asgi.application'
 # DRF 설정
 from rest_framework import permissions                  # DRF 권한 클래스
 
+# REST_FRAMEWORK 설정
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [                     # 교재에는 없지만, 일반적으로 많이 사용되는 설정
         'rest_framework.permissions.AllowAny',          # 기본적으로 모든 API에 접근을 허용 (개발 단계에서 유용)
         # 'rest_framework.permissions.IsAuthenticated', # 인증된 사용자만 접근 허용
     ],
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer',        # 기본 응답 형식을 JSON으로 설정
-    ],
+    
     'DEFAULT_PARSER_CLASSES': [
         'rest_framework.parsers.JSONParser',            # 기본 요청 본문 파싱 형식을 JSON으로 설정
     ],
+    
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',   # 기본 페이지네이션 설정
+    'PAGE_SIZE': 10,                                                                # 페이지 크기 = 10으로 설정
+    
     # 'DEFAULT_AUTHENTICATION_CLASSES': [               # 인증 방식 설정 (선택적)
     #     'rest_framework.authentication.TokenAuthentication',
     # ],
+    
+    # drf-spectacular 설정 추가
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'SPECTACULAR_SETTINGS': {
+        'TITLE': 'Book API',                                          # 프로젝트에 맞는 API 타이틀로 변경
+        'DESCRIPTION': 'Django REST Framework를 이용한 책 관리 API',      # 프로젝트 설명
+        'VERSION': '1.0.0',
+        # 'SERVE_INCLUDE_SCHEMA': False, # 스키마 자체를 포함할지 여부 (기본값 True)
+        # 'SCHEMA_PATH_PREFIX': r'/api/v[0-9]+', # API 버저닝을 위한 경로 접두사 정규식 (선택 사항)
+    },
 }
 
+# ----------------------------------------------------------------------------------
+# DEFAULT_RENDERER_CLASSES 를 DEBUG 값에 따라 동적으로 설정하는 로직 추가
+# ----------------------------------------------------------------------------------
+# 렌더러는 기본적으로 JSONRenderer를 포함
+RENDERER_CLASSES = [
+    'rest_framework.renderers.JSONRenderer',
+]
+
+# DEBUG 모드일 때만 BrowsableAPIRenderer 추가
+if DEBUG:
+    RENDERER_CLASSES.append('rest_framework.renderers.BrowsableAPIRenderer')
+
+# 최종 렌더러 클래스 리스트를 REST_FRAMEWORK 설정에 할당합
+REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] = RENDERER_CLASSES
+
+# --------------
+# TEMPLATES 설정
+# --------------
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # BASE_DIR = '20250724-fullstack-tutorial'을 가리키도록 조정
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
