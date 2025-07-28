@@ -34,7 +34,16 @@
 -   DRF API 기본 페이지네이션 적용
 -   Django 템플릿 경로 설정 문제 해결 및 테스트 페이지 추가
 -   DRF 'Book' 모델 API 테스트 코드 구현 및 결과 검증
--   **pyenv, Poetry로 파이썬 환경 재설정**
+-   pyenv, Poetry로 파이썬 환경 재설정
+-   **REST API로 ChatGPT 모델을 Fine-Tuning 하기**
+    - Model 업데이트: FineTunedModel과 TrainingData 요소 추가
+    - Serializers 업데이트: Model 요소 추가에 따른 코드 변경
+    - Admin 업데이트:
+    - Django Shell로 데이터 추가
+    - API 접근, Auth Token 설정
+    - REST API -> 학습 데이터 추가 및 보기 구현
+    - GEMINI API 사용 -> Fine-tuning 
+
 
 ---
 **개발 환경 / Development Environment:**

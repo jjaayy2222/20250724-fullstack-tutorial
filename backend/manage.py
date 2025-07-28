@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# 20250728-fullstack-tutorial/backend/manage.py
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
