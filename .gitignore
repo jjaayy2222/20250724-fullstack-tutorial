@@ -86,3 +86,4 @@ frontend/.env.*.local
 .coverage               # coverage.py 보고서 파일
 htmlcov/                # coverage.py 보고서 디렉토리
 
+requirements.txt
