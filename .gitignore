@@ -30,6 +30,13 @@ media/
 *.log
 *.pot
 
+# Poetry managed dependencies - these should be committed
+# pyproject.toml
+# poetry.lock
+
+# Old dependency files - typically not needed with Poetry
+requirements.txt
+
 
 # -----------------------------------------------
 # 2. Node.js (Next.js 프론트엔드 관련)
