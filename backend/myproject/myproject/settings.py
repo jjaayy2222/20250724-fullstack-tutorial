@@ -11,7 +11,12 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv                              # 환경변수 가져오기
 from pathlib import Path                                    # BASE_DIR을 위한 import
+
+# 환경변수 
+load_dotenv()                                               # .env 파일 로드
+ADMIN_API_TOKEN = os.getenv('ADMIN_API_TOKEN')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent           # BASE_DIR 정의 확인 (myproject/backend/myproject 를 가리킬 수 있음)
@@ -41,6 +46,7 @@ INSTALLED_APPS = [
     
     # DRF 추가
     'rest_framework',
+    'rest_framework.authtoken',     # rest_framework의 인증 허용
     'drf_spectacular',              # DRF 문서화 도구
     
     # myapp
@@ -79,9 +85,9 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',   # 기본 페이지네이션 설정
     'PAGE_SIZE': 10,                                                                # 페이지 크기 = 10으로 설정
     
-    # 'DEFAULT_AUTHENTICATION_CLASSES': [               # 인증 방식 설정 (선택적)
-    #     'rest_framework.authentication.TokenAuthentication',
-    # ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [                 # REST API 요청 시 인증 방식 설정
+        'rest_framework.authentication.TokenAuthentication',          # Token 기반 인증 = 클라이언트가 API 요청 시 토큰을 헤더에 포함 
+    ],
     
     # drf-spectacular 설정 추가
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',

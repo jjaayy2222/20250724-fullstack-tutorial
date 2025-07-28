@@ -14,11 +14,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+# 20250724-fullstack-tutorial/backend/backend/urls.py
+
+# 임포트
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework.authtoken.views import obtain_auth_token            # rest_framework의 인증 허용
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('fine_tuning_chatbot.urls')),
+    path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
 ]
