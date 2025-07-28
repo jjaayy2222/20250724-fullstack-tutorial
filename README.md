@@ -40,7 +40,7 @@
     - Serializers 업데이트: Model 요소 추가에 따른 코드 변경
     - Admin 업데이트:
     - Django Shell로 데이터 추가
-    - API 접근, Auth Token 설정
+    - API 접근, Auth Token 설정: **테스트 완료** -> **슈퍼유저 및 토큰 생성, API 접속 확인**
     - REST API -> 학습 데이터 추가 및 보기 구현
     - GEMINI API 사용 -> Fine-tuning 
 
