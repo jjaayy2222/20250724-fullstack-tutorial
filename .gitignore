@@ -65,6 +65,7 @@ frontend/.env.*.local
 *.swp
 .idea/              # JetBrains IDE (IntelliJ, PyCharm 등)
 .vscode/            # VS Code 설정 (개인 설정이 아니라면 보통 무시)
+*.code-workspace
 *.iml               # IntelliJ 모듈 파일
 
 
