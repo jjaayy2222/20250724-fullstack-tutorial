@@ -27,22 +27,26 @@
 ---
 ## 진행 상황 / Current Progress
 -   Django 프로젝트 생성 및 설정
--   Django 앱(myapp) 생성 및 기본 뷰/템플릿 연동
+    -   Django 앱(myapp) 생성 및 기본 뷰/템플릿 연동
 -   Django REST Framework 설치 및 API 뷰 구성
--   Django project 구조 재조정 (backend / django-practice -> myproject)
--   DRF API 문서화 (drf-spectacular) 및 설정 개선
--   DRF API 기본 페이지네이션 적용
--   Django 템플릿 경로 설정 문제 해결 및 테스트 페이지 추가
--   DRF 'Book' 모델 API 테스트 코드 구현 및 결과 검증
--   pyenv, Poetry로 파이썬 환경 재설정
--   **REST API로 ChatGPT 모델을 Fine-Tuning 하기**
+    -   Django project 구조 재조정 (backend / django-practice ➡️ myproject)
+  -   DRF API 문서화 (drf-spectacular) 및 설정 개선
+    -   DRF API 기본 페이지네이션 적용
+  -   Django 템플릿 경로 설정 문제 해결 및 테스트 페이지 추가
+  -   DRF 'Book' 모델 API 테스트 코드 구현 및 결과 검증
+    -   pyenv, Poetry로 파이썬 환경 재설정
+  -   REST API로 ChatGPT 모델을 Fine-Tuning 하기
     - Model 업데이트: FineTunedModel과 TrainingData 요소 추가
     - Serializers 업데이트: Model 요소 추가에 따른 코드 변경
     - Admin 업데이트:
     - Django Shell로 데이터 추가
-    - API 접근, Auth Token 설정: **테스트 완료** -> **슈퍼유저 및 토큰 생성, API 접속 확인**
-    - REST API -> 학습 데이터 추가 및 보기 구현
-    - GEMINI API 사용 -> Fine-tuning 
+    - API 접근, Auth Token 설정: 테스트 완료 ➡️ 슈퍼유저 및 토큰 생성, API 접속 확인
+    - REST API ➡️ 학습 데이터 추가 및 보기 구현
+    - GEMINI API 사용 ➡️ Fine-tuning
+- **React_기본**
+  - React 기본 사항: 구성 요소, 상태 및 Props
+      - 개념 정리 ➡️ `../docs/react`, `../docs/images` 디렉토리, `01_react_concept.md` 파일 생성
+  - 
 
 
 ---
