@@ -44,9 +44,13 @@
     - REST API ➡️ 학습 데이터 추가 및 보기 구현
     - GEMINI API 사용 ➡️ Fine-tuning
 - **React_기본**
-  - React 기본 사항: 구성 요소, 상태 및 Props
-      - 개념 정리 ➡️ `../docs/react`, `../docs/images` 디렉토리, `01_react_concept.md` 파일 생성
-  - 
+  - **React 기본 사항: 구성 요소, 상태 및 Props**
+      - **개념 정리 ➡️ `../docs/react`, `../docs/images` 디렉토리, `01_react_concept.md` 파일 생성**
+  - **React 프로젝트 설정**
+      - **개념 정리 : `02_setting_react_project.md`**
+      - **프로젝트 생성 및 실습**
+          - **`/frontend/my-app/'**
+          - **`01_create-react0app.md`**
 
 
 ---
