@@ -45,12 +45,13 @@
     - GEMINI API 사용 ➡️ Fine-tuning
 - **React_기본**
   - **React 기본 사항: 구성 요소, 상태 및 Props**
-      - **개념 정리 ➡️ `../docs/react`, `../docs/images` 디렉토리, `01_react_concept.md` 파일 생성**
+      - **개념 정리 ➡️ `../docs/react`**
   - **React 프로젝트 설정**
-      - **개념 정리 : `02_setting_react_project.md`**
+      - **개념 정리** : **React 기본 컴포넌트, JSX와 요소 렌더링, 컴포넌트 구성과 재사용성, 컴포넌트에서의 `state` 소개 및 관리, 상태 끌어올리기**
+          - `03_react_components.md`, `04_jsx_and_element_rendering.md`, `05_component_composition_and_reusability`, `06_react_state_management.md`
       - **프로젝트 생성 및 실습**
           - **`/frontend/my-app/'**
-          - **`01_create-react0app.md`**
+          - **`/frontend/my-app/src/components/** 생성 -> 개별 실습 진행
 
 
 ---
