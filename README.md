@@ -35,23 +35,21 @@
   -   Django 템플릿 경로 설정 문제 해결 및 테스트 페이지 추가
   -   DRF 'Book' 모델 API 테스트 코드 구현 및 결과 검증
     -   pyenv, Poetry로 파이썬 환경 재설정
-  -   REST API로 ChatGPT 모델을 Fine-Tuning 하기
-    - Model 업데이트: FineTunedModel과 TrainingData 요소 추가
-    - Serializers 업데이트: Model 요소 추가에 따른 코드 변경
-    - Admin 업데이트:
+  -   REST API로 GEMINI ➡️ Fine-tuning
+    - Model 업데이트, Serializers, Admin Update
     - Django Shell로 데이터 추가
-    - API 접근, Auth Token 설정: 테스트 완료 ➡️ 슈퍼유저 및 토큰 생성, API 접속 확인
-    - REST API ➡️ 학습 데이터 추가 및 보기 구현
-    - GEMINI API 사용 ➡️ Fine-tuning
+    - API 접근, Auth Token 설정, REST API
+
 - **React_기본**
   - **React 기본 사항: 구성 요소, 상태 및 Props**
-      - **개념 정리 ➡️ `../docs/react`**
+      - **개념 정리 ➡️ `../docs/concepts/react`**
+      - **실습 정리 ➡️ `../docs/practice/`**
   - **React 프로젝트 설정**
       - **개념 정리** : **React 기본 컴포넌트, JSX와 요소 렌더링, 컴포넌트 구성과 재사용성, 컴포넌트에서의 `state` 소개 및 관리, 상태 끌어올리기**
           - `03_react_components.md`, `04_jsx_and_element_rendering.md`, `05_component_composition_and_reusability`, `06_react_state_management.md`
       - **프로젝트 생성 및 실습**
           - **`/frontend/my-app/'**
-          - **`/frontend/my-app/src/components/** 생성 -> 개별 실습 진행
+          - **`/frontend/my-app/src/components/** 생성 ➡️ 개별 실습 진행
 
 
 ---

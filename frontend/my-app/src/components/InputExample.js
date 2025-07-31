@@ -29,4 +29,4 @@ function InputExample() {                                       // InputExample 
 
 export default InputExample;                                    // InputExample 컴포넌트 외부로 내보내기
 
-// next stet :
+// next stet : App.js에 연결하기
