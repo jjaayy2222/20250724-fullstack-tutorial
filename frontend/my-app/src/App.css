@@ -13,7 +13,8 @@
   }
 }
 
-.App-header {
+/* .App-header 기본 설정 */
+/*.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,7 +23,22 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+} */
+
+/* component 실습용 App-header css */
+.App-header {
+  background-color: #282c34;
+  padding: 40px;
+  color: white;
+  text-align: center;
 }
+
+/* component 실습용 App-main css */ 
+.App main {
+  margin-top: 40px;
+  background-color: #f9f9f9;
+}
+
 
 .App-link {
   color: #61dafb;

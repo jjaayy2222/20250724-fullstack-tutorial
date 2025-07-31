@@ -1,6 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 
+// components 실행 관련 임포트
+import Counter from './components/Counter';
+import CounterParent from './components/CounterParent';
+import InputExample from './components/InputExample';
+
+
 function App() {
   return (
     <div className="App">
@@ -32,6 +38,16 @@ function App() {
           Learn React          
         </a>
       </header>
+
+      {/* components 실습 관련을 b */}    
+      {/* 👇 header 바깥 영역에 다른 컴포넌트들 추가 */}
+      <main style={{ padding: '24px', background: '#fafaf7' }}>
+        <Counter />
+        <CounterParent />
+        <InputExample />
+      </main>
+
+
     </div>
   );
 }
