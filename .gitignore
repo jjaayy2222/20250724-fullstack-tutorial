@@ -31,10 +31,14 @@ media/
 # 2. Node.js (Next.js 프론트엔드 관련)
 # -----------------------------------------------------
 # Node.js 패키지 및 빌드 아티팩트
-node_modules/                   # 프로젝트 루트 또는 앱 내 모든 node_modules 무시
-frontend/node_modules/          # (선택 사항) 명시적으로 frontend 내부 node_modules 무시
-frontend/.next/                 # Next.js 빌드 아티팩트
-frontend/out/                   # Next.js export 결과물 (정적 사이트 생성 시)
+# 프로젝트 루트 또는 앱 내 모든 node_modules 무시
+node_modules/
+# (선택 사항) 명시적으로 frontend 내부 node_modules 무시                   
+frontend/node_modules/
+# Next.js 빌드 아티팩트          
+frontend/.next/
+# Next.js export 결과물 (정적 사이트 생성 시)                
+frontend/out/                   
 
 # Node.js 로그 및 캐시 파일
 npm-debug.log*
@@ -63,18 +67,26 @@ frontend/.env.*.local
 
 # IDE 또는 편집기 스왑/설정 파일
 *.swp
-.idea/              # JetBrains IDE (IntelliJ, PyCharm 등)
-.vscode/            # VS Code 설정 (개인 설정이 아니라면 보통 무시)
+# JetBrains IDE (IntelliJ, PyCharm 등)
+.idea/
+# VS Code 설정 (개인 설정이 아니라면 보통 무시)              
+.vscode/            
 *.code-workspace
-*.iml               # IntelliJ 모듈 파일
+# IntelliJ 모듈 파일
+*.iml               
 
 
 # -----------------------------------------------------
 # 5. 기타 임시 파일 및 캐시
 # -----------------------------------------------------
-*~                  # Emacs/Vim 백업 파일 등 임시 파일
-.pytest_cache/      # pytest 캐시 디렉토리
-.coverage           # coverage.py 보고서 파일
-htmlcov/            # coverage.py 보고서 디렉토리
+# Emacs/Vim 백업 파일 등 임시 파일
+*~
+# pytest 캐시 디렉토리                  
+.pytest_cache/
+# coverage.py 보고서 파일      
+.coverage
+# coverage.py 보고서 디렉토리           
+htmlcov/            
 
-requirements.txt 
+# requirements.txt 
+temp/
