@@ -1,0 +1,67 @@
+/* frontend/chatbot-app/src/StressRelirefForm.css */
+
+/* 폼 전체를 감싸는 컨테이너 스타일 */
+.stress-relief-form {
+  display: flex;                                /* 자식 요소들을 플렉스 박스로 배치 */
+  flex-direction: column;                       /* 세로 방향으로 정렬 */
+  width: 90%;                                   /* 모바일에서는 90% */
+  max-width: 400px;                             /* 최대 크기 제한 */
+  width: 300px;                                 /* 폼의 너비를 300px로 고정 */
+  margin: 0 auto;                                /* 수평 가운데 정렬 (자동 마진) */
+}
+
+/* 텍스트 입력 필드 스타일 (기분 입력) */
+.input-field {
+  padding: 12px;                                /* 안쪽 여백을 10px로 지정 */
+  margin-bottom: 15px;                          /* 아래쪽에 여백 추가 (다음 요소와 간격) */
+  border: 1px solid #ccc;                     /* 테두리를 연한 회색으로 지정 */
+  border-radius: 4px;                           /* 테두리 둥글게 만들기 */
+  font-size: 16px;                              /* 글자 크기 설정 */
+}
+
+/* 텍스트 영역 스타일 (계획 입력) */
+.textarea-field {
+  padding: 12px;                                /* 안쪽 여백 */
+  height: 100px;                                /* 높이를 100px로 고정 */
+  border: 1px solid #ccc;                     /* 테두리를 연한 회색으로 지정 */
+  border-radius: 4px;                           /* 테두리 둥글게 만들기 */
+  font-size: 16px;                              /* 글자 크기 설정 */
+  resize: none;                                 /* 사용자가 크기 조절 못하게 제한 */
+  margin-bottom: 15px;                          /* 아래쪽 여백 */
+}
+
+/* 태블릿 이상 */
+@media (min-width: 768px) {
+    .stress-relief-form {
+        width: 400px;
+        padding: 30px;
+    }
+
+    .input-field, .textarea-field {
+        font-size: 18px;
+    }
+}
+
+/* 데스크탑 */
+@media (min-width: 1024px) {
+    .stress-relief-form {
+        width: 500px;
+    }
+}
+
+
+/* 제출 버튼 스타일 */
+.submit-button {
+  background-color: #007bff;                  /* 배경색: 파란색 계열 */
+  color: white;                               /* 글자색: 흰색 */
+  padding: 10px;                                /* 안쪽 여백 */
+  border: none;                                 /* 테두리 제거 */
+  border-radius: 4px;                           /* 둥근 테두리 */
+  font-size: 16px;                              /* 글자 크기 */
+  cursor: pointer;                              /* 마우스를 올렸을 때 커서 모양 변경 (클릭 가능 표시) */
+}
+
+/* 버튼에 마우스를 올렸을 때의 스타일 */
+.submit-button:hover {
+  background-color: #0056b3;                  /* hover: 더 진한 파란색으로 변경 */
+}

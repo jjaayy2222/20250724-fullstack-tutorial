@@ -1,7 +1,9 @@
 // frontend/chatbot-app/src/App.js
 import React from 'react';
 import './App.css';
+import StressReliefForm from './StressRelirefForm';
 
+/* step_1 ~ 4
 function App() {
   return (
     <div className="app">
@@ -20,6 +22,16 @@ function App() {
           <button type="submit">Send</button>
         </form>
       </div>
+    </div>
+  );
+} */
+
+// step_5
+  function App() {
+  return (
+    <div className="App">
+      <h1>Jay의 Step 5 - 폼 다루기 🎯</h1>
+      <StressReliefForm />
     </div>
   );
 }

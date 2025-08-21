@@ -17,6 +17,16 @@
   font-size: 2.5rem;
 }
 
+/* step_5_div className 스타일 추가 */
+.App {
+  display: flex;                                /* 가로 중앙 정렬을 위해 flex 사용 */
+  flex-direction: column;                       /* 요소들을 세로로 쌓기 */
+  align-items: center;                          /* 가로축(수평) 중앙 정렬 */
+  margin-top: 50px;                             /* 화면 상단에서 아래로 50px 마진 */
+}
+/* 여가까지 */
+
+
 /* 채팅 박스 전체 */
 .chat-box {
   display: flex;
