@@ -1,139 +1,159 @@
 /* frontend/chatbot-app/src/App.css */
+/* 기존 스타일 유지 + 네비게이션 추가 + Step6에서의 스타일 = 다크모드 추가*/
 
-/* 전체 앱 스타일 */
-.app {
-  text-align: center;
-  background-color: #f5f5f5;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.app h1 {
-  color: #333;
-  margin-bottom: 30px;
-  font-size: 2.5rem;
-}
-
-/* step_5_div className 스타일 추가 */
+/* 기존 스타일 모두 유지 */
 .App {
-  display: flex;                                /* 가로 중앙 정렬을 위해 flex 사용 */
-  flex-direction: column;                       /* 요소들을 세로로 쌓기 */
-  align-items: center;                          /* 가로축(수평) 중앙 정렬 */
-  margin-top: 50px;                             /* 화면 상단에서 아래로 50px 마진 */
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  transition: all 0.3s ease;          /* 부드러운 테마 전환 */
 }
-/* 여가까지 */
 
+/* 다크 테마 추가 */
+.App.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 
-/* 채팅 박스 전체 */
-.chat-box {
+/* 기존 네비게이션 스타일 유지 */
+.step-navigation {
   display: flex;
-  flex-direction: column;
-  width: 500px;
-  height: 600px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-/* 메시지 리스트 영역 */
-.messages-list {
-  flex: 1;
+  gap: 10px;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
+  background-color: #fff;
+  border-bottom: 2px solid #dee2e6;
   justify-content: center;
-  align-items: center;
-  overflow-y: auto;
-  background: #f8f9fa;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;          /* 부드러운 전환 */
 }
 
-/* 사용자 메시지 */
-.user-message {
-  background: #007bff;
-  color: white;
-  padding: 12px 18px;
-  margin: 10px 0;
-  border-radius: 20px;
-  max-width: 80%;
-  align-self: flex-end;
-  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3);
+/* 다크모드 네비게이션 */
+.App.dark .step-navigation {
+  background-color: #2d2d2d;
+  border-bottom-color: #444;
 }
 
-/* AI 메시지 */
-.ai-message {
-  background: white;
-  color: #333;
-  padding: 12px 18px;
-  margin: 10px 0;
-  border: 1px solid #e0e0e0;
-  border-radius: 20px;
-  max-width: 80%;
-  align-self: flex-start;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* 입력 폼 영역 */
-.message-form {
-  display: flex;
-  padding: 15px;
-  background: white;
-  border-top: 1px solid #e0e0e0;
-}
-
-/* 입력창 */
-.message-input {
-  flex: 1;
-  padding: 12px 16px;
-  border: 1px solid #ddd;
+/* 기존 버튼 스타일 유지 */
+.step-navigation button {
+  padding: 12px 20px;
+  border: 2px solid #007bff;
+  background-color: white;
+  color: #007bff;
   border-radius: 25px;
-  outline: none;
-  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
   font-size: 14px;
 }
 
-.message-input:focus {
+/* 다크모드 버튼 */
+.App.dark .step-navigation button {
+  background-color: #444;
+  color: #fff;
   border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
-.message-input::placeholder {
-  color: #999;
-}
-
-/* 전송 버튼 */
-button[type="submit"] {
-  padding: 12px 20px;
-  background: #007bff;
+.App.dark .step-navigation button.active {
+  background-color: #007bff;
   color: white;
-  border: none;
-  border-radius: 25px;
+}
+
+.step-navigation button:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.step-navigation button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.step-navigation button:hover:not(:disabled) {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.step-navigation button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* 테마 토글 버튼 추가 */
+.theme-toggle {
+  padding: 8px 12px !important;
+  border: 2px solid #28a745 !important;
+  background-color: white !important;
+  color: #28a745 !important;
+  border-radius: 50% !important;
   cursor: pointer;
-  font-weight: 500;
+  font-size: 16px !important;
+  font-weight: normal !important;
   transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-button[type="submit"]:hover {
-  background: #0056b3;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+.theme-toggle:hover {
+  background-color: #28a745 !important;
+  color: white !important;
+  transform: scale(1.1);
 }
 
-button[type="submit"]:active {
-  transform: translateY(0);
+.App.dark .theme-toggle {
+  background-color: #333 !important;
+  border-color: #ffd700 !important;
+  color: #ffd700 !important;
 }
+
+.App.dark .theme-toggle:hover {
+  background-color: #ffd700 !important;
+  color: #333 !important;
+}
+
+/* 다크모드 content 영역 */
+.App.dark .step-content {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.App.dark .home-content h1 {
+  color: #4fc3f7;
+}
+
+
+/* 기존 content 영역 */
+.step-content {
+  padding: 20px;
+  min-height: calc(100vh - 80px);
+}
+
+.home-content {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.home-content h1 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+
 
 /* 반응형 디자인 */
-@media (max-width: 600px) {
-  .chat-box {
-    width: 90vw;
-    height: 80vh;
+@media (max-width: 768px) {
+  .step-navigation {
+    flex-direction: column;
+    align-items: center;
   }
   
-  .app h1 {
-    font-size: 2rem;
+  .step-navigation button {
+    width: 100%;
+    max-width: 300px;
   }
 }
