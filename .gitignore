@@ -94,13 +94,3 @@ frontend/chatbot-app/audit-report.txt
 
 # requirements.txt 
 temp/
-
-
-# 08_27 실패한 파일들 깃 추적 일단 피하기
-frontend/chatbot-app/src/components/Dashboard.js
-frontend/chatbot-app/src/components/Home.js
-frontend/chatbot-app/src/components/NavBar.css
-frontend/chatbot-app/src/components/NavBar.js
-frontend/chatbot-app/src/components/NotFound.js
-frontend/chatbot-app/src/components/Profile.js
-frontend/chatbot-app/src/components/Stats.js

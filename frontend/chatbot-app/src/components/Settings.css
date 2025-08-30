@@ -1,0 +1,30 @@
+/* frontend/chatbot-app/src/components/Settings.css */
+
+.settings-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.settings-container h2 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.settings-content {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.settings-content h3 {
+  margin-top: 0;
+  color: #555;
+}
+
+.settings-content p {
+  margin-bottom: 0;
+  line-height: 1.5;
+}

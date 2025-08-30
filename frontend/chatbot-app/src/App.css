@@ -143,7 +143,11 @@
   margin-bottom: 20px;
 }
 
-
+/* 추가 */
+.main-content {
+  min-height: calc(100vh - 80px);     /* NavBar 높이만큼 빼기 */
+  padding-top: 1rem;
+}
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {

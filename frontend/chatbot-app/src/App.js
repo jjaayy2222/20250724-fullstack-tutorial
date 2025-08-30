@@ -3,10 +3,17 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import { useAppContext } from './contexts/AppContext';
-import { Routes, Route } from "react-router-dom";
-import Step1to4 from "./components/Step1to4";               // 기존 컴포넌트 import
-import Step5 from "./components/Step5";
-import Dashboard from "./components/Dashboard";             // Step6 대시보드
+import { Routes, Route } from 'react-router-dom';
+
+// 모든 컴포넌트 import
+import NavBar from './components/NavBar';
+import Home from './components/Home';
+import Stats from './components/Stats';
+import Dashboard from './components/Dashboard';
+import Profile from './components/Profile';
+import Practice from './components/Practice';
+import Settings from './components/Settings';
+
 
 const App = () => {
   const { theme } = useAppContext();
@@ -17,11 +24,19 @@ const App = () => {
 
   return (
     <div className={`App ${theme}`}>
-      <Routes>
-        <Route path="/" element={<Step1to4 />} />  {/* Step1-4 페이지*/}
-        <Route path="/form" element={<Step5 />} />  {/* Step5 폼 */}|
-        <Route path="/dashboard" element={<Dashboard />} />  {/* Step6 대시보드 */}
-      </Routes>
+      <NavBar />
+      
+      <main className="main-content">
+        <Routes>
+          {/* 추가 개선  <Route path="/" element={<Welcome />} />*/}
+          <Route path="/home" element={<Home />} />
+          <Route path="/stats" element={<Stats />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/practice" element={<Practice />} />
+          <Route path="/settings" element={<Settings />} />  {/* <- 새로 추가 */}
+        </Routes>
+      </main>
     </div>
   );
 };

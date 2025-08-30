@@ -1,0 +1,28 @@
+/* frontend/chatbot-app/src/components/NavBar.css */
+
+/* NavBar.css (기본 버전) */
+.nav-bar {
+  display: flex;
+  gap: 20px;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-bar a.active {
+  font-weight: bold;
+  color: #007bff;
+  background-color: #e3f2fd;
+}
+
+.nav-bar a:hover {
+  background-color: #e9ecef;
+}
